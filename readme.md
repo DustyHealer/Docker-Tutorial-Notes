@@ -5,7 +5,7 @@
 2. If not present, it downloads the docker image file system snapshot from the docker hub. 
 3. After that it fires the startup command.
 4. We can override the startup command also. Examples docker run hello-world ls, docker run hello-world sh, docker run hello-world echo himanshu singhal.
-5. docker run = docker create + docker start.
+5. docker run = docker create(or docker pull) + docker start.
 6. docker create = creates a container and displays the hashcode on the terminal screen.
 7. docker start -a container_hash: Will start the container and display the result on terminal.
 8. docker start container_hash: Will not print the output of the container, instead prints the hash code.
