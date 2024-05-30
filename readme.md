@@ -56,3 +56,7 @@ docker build -t himanshu(docker username)/redis(image name):latest(version) .(do
 1. Access Bash inside the docker virtual machine: docker exec -it 4295(container_id) bash
 2. docker cp <source> <dest>: This command is used to copy files from current machine to docker vm and vice versa
 3. docker commit container_id user/new-image-name:version : If you install anything inside a virtual container or even add or edit any files, then configuration of the docker container changes. Then we need to commit the changes to docker image and update the image file, then use this command. 
+
+# Docker command to run Jenkins inside a contianer:
+1. docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home --restart=on-failure jenkins/jenkins:lts
+2. Copy the password from the docker logs.
